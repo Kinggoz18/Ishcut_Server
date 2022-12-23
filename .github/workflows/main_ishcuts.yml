@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'Ishcuts'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6B4EFE37BC3049DFB905B1C527966037 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0DBFB69DD3E425297C7D1F1624F4185 }}
           package: .
