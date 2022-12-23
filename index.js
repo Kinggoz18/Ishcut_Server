@@ -1,9 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import routes from './Routes/routes.js'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 let app = new express();
-const PORT_NUM = 4040;
+const PORT_NUM = process.env.PORT || 4000;
 
 //Mongoose Connection setup
 const url = "mongodb+srv://chigozie_M:raphael2002@cluster0.1xu9qqp.mongodb.net/Ish_haircut"
