@@ -4,7 +4,7 @@
   "description": "Ishmael haircut server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "NODE_ENV=production nodemon ./index.js --exec babel-node -e js"
   },
   "keywords": [],
   "author": "Chigozie Muonagolu",
