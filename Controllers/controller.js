@@ -9,7 +9,8 @@ const BookingCol = mongoose.model('Bookings', Booking);
 
 //Function to Authenticate the admin when logining in
 export const AdminLogin = (req, res) =>{
-
+    res.header("Access-Control-Allow-Origin", "*"); //FIX FOR CROS ORGIN ERROR, * opens up the API
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
         let username = req.body.username;
         let password = req.body.password;
 
@@ -23,6 +24,8 @@ export const AdminLogin = (req, res) =>{
 }
 //Middleware Function to handle authenticating users
 export const AuthenticateUser = (req, res)=>{
+    res.header("Access-Control-Allow-Origin", "*"); //FIX FOR CROS ORGIN ERROR, * opens up the API
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
     let userKey = req.body.key;
     AdminCol.findById(userKey, (err, data)=>{
         if(err){
