@@ -37,10 +37,6 @@ export const Booking = new Schema({
         type: String,
         required: true
     },
-    Addon: {
-        type: String,
-        required: false
-    },
     Note: {
         type: String,
         required: false
